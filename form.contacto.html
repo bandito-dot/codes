@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto y Soporte Técnico</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <form id="support-form">
+        <fieldset>
+            <legend>Contacto y Soporte Técnico</legend>
+            
+            <label for="name">Nombre completo:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Número de teléfono (opcional):</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]+">
+            
+            <label for="subject">Asunto:</label>
+            <select id="subject" name="subject" required>
+                <option value="">Seleccione un asunto</option>
+                <option value="consulta">Consulta</option>
+                <option value="reporte">Reporte de error</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="otro">Otro</option>
+            </select>
+            
+            <label for="message">Descripción del problema o consulta:</label>
+            <textarea id="message" name="message" required minlength="20"></textarea>
+            
+            <label for="file">Adjuntar archivo (opcional):</label>
+            <input type="file" id="file" name="file" accept="image/*,.pdf">
+            
+            <p>Preferencia de contacto:</p>
+            <label><input type="radio" name="contact_preference" value="email"> Correo</label>
+            <label><input type="radio" name="contact_preference" value="phone"> Teléfono</label>
+            <label><input type="radio" name="contact_preference" value="any"> Cualquiera</label>
+            
+            <label>
+                <input type="checkbox" id="consent" name="consent" required>
+                Acepto recibir respuestas a mi consulta.
+            </label>
+            
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
